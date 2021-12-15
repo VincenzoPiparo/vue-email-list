@@ -21,9 +21,9 @@ const app = new Vue (
             generationAnewEmail: function() {
                 // In API 
                 axios.get('https://flynn.boolean.careers/exercises/api/random/mail').then((response) => {
-                    // console.log(response)
+                    
                     this.myEmails.push(response.data.response) 
-                    // console.log(this.myEmails)
+                    
                 }
                 )
                 
