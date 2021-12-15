@@ -14,13 +14,21 @@ const app = new Vue (
     {
         el: '#root',
         data:{
-
+            // Creation a empty array
+            myEmails: []
         },
         methods: {
-
+            generationAnewEmail: function() {
+                // In API 
+                axios.get('https://flynn.boolean.careers/exercises/api/random/mail').then((response) => {
+                    // console.log(response)
+                    this.myEmails.push(response.data.response) 
+                    // console.log(this.myEmails)
+                }
+                )
+                
+            }
         },
-        created: function() {
 
-        }
 }
 )
